@@ -1,0 +1,20 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --require ts-node/register tests/**/*"
+  },
+  "dependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "ts-node": "^8.10.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "typescript": "^3.9.7"
+  }
+}
