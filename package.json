@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "test": "mocha --require ts-node/register tests/**/*",
-    "build-ts": "tsc",
+    "build-ts": "rm -rf dist && tsc",
     "watch-ts": "tsc -w"
   },
   "dependencies": {

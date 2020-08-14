@@ -1,15 +1,13 @@
 import supertest from 'supertest';
-import dotenv from 'dotenv';
+import { api } from './constants/api';
+const request = supertest(api.auth);
 
-const env = require('dotenv').config();
-const api = supertest(process.env.AUTH_BASE_URL);
-
-const getMovieList = (key, search) => api.get('')
+const getMovieList = (key, search) => request.get('')
  .set('Content-Type', 'application/json')
  .set('Accept', 'application/json')
  .query({apikey : key, s : search})
 
-const Login = (email, password) => api.post('')
+const Login = (email, password) => request.post('')
  .set('Content-Type', 'application/json')
  .send({email: email, password: password})
 
